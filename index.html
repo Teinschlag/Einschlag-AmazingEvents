@@ -13,17 +13,17 @@
 <body>
     
     <header>
-        <nav class="navbar bg-black d-flex ml-auto">
-            <div class="container">
-                <img class="logo" src="./assets/Logo Amazing Events.png" alt="" width="150" height="120">
+        <nav class="navbar bg-black d-flex">
+            <div class="container w-25" style="margin-left: 0">
+                <img class="logo w-50" src="./assets/Logo Amazing Events.png" alt="">
             </div>
             <nav class="navbar bg-black d-flex mr-auto" id="buttons">
                 <form class="d-flex justify-content-around">
-                  <button class="btn btn-outline-success me-1" type="button">Home</button>
-                  <button class="btn btn-outline-success me-1" type="button">Upcoming Events</button>
-                  <button class="btn btn-outline-success me-1" type="button">Past Events</button>
-                  <button class="btn btn-outline-success me-1" type="button">Contact</button>
-                  <button class="btn btn-outline-success me-1" type="button">Stats</button>
+                  <a class="btn btn-outline-success me-1" type="button" href="#">Home</a>
+                  <a class="btn btn-outline-success me-1" type="button" href="./upEvents.html">Upcoming Events</a>
+                  <a class="btn btn-outline-success me-1" type="button" href="./pastEvents.html">Past Events</a>
+                  <a class="btn btn-outline-success me-1" type="button" href="./contact.html">Contact</a>
+                  <a class="btn btn-outline-success me-1" type="button" href="./stats.html">Stats</a>
                 </form>
               </nav>
           </nav>
@@ -31,7 +31,7 @@
     </header>
 
     <main>
-        <div id="carouselExample" class="carousel slide d-flex w-10">
+        <div id="carouselExample" class="carousel slide d-flex" style="height: 50">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="./assets/calesita.jpg" class="d-flex w-100" alt="Cinema">
@@ -53,6 +53,7 @@
             </button>
           </div>
 
+          <div class="form-check form-check-inline d-flex d-inline-block" style="margin-left: 5px">
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
             <label class="form-check-label" for="inlineCheckbox1">Category</label>
@@ -73,13 +74,14 @@
             <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
             <label class="form-check-label" for="inlineCheckbox5">Category</label>
           </div>
+        
 
-          <div class="input-group">
-            <div class="form-outline w-100">
+          <div class="input-group d-flex justify-content-end" style="margin-left: 0;">
+            <div class="form-outline w-25">
               <input type="search" id="form1" class="form-control" />
-              <label class="form-label" for="form1">Search</label>
+              <label class="form-label" for="form1"></label>
             </div>
-            <button type="button" class="btn btn-primary w-100">
+            <button type="button" class="btn btn-primary w-25" style="width: 50 height: 10px">
               <i class="fas fa-search"></i>
             </button>
           </div>
