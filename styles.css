@@ -1,4 +1,36 @@
-.navbar{
-    display: flex;
-    flex: end;
+/* #logo{
+  display: flex;
+  margin-left: auto;
 }
+
+#buttons{
+    display: flex;
+    flex-direction: column;
+} */
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* .fa-instagram {
+    background: transparent;
+    color: black;
+  } */
+
+  .fa-facebook {
+    background: transparent;
+    color: black;
+  }
+  
+  .fa-twitter {
+    background: transparent;
+    color: black;
+  }
