@@ -4,9 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./assets/Logo-Amazing-Events.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Stats</title>
 </head>
 <body>
+    <header>
+            <nav class="navbar bg-black d-flex">
+              <div class="container w-25" style="margin-left: 0">
+                <img class="logo w-50" src="./assets/Logo Amazing Events.png" alt="">
+              </div>
+              <nav class="navbar bg-black d-flex mr-auto" style="color: #d63384; border-color: #d63384" id="buttons">
+                <form class="d-flex justify-content-around">
+                  <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./index.html">Home</a>
+                  <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./upEvents.html">Upcoming
+                    Events</a>
+                  <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./pastEvents.html">Past
+                    Events</a>
+                  <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./contact.html">Contact</a>
+                  <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="#">Stats</a>
+                </form>
+              </nav>
+            </nav>
+    </header>
     
+    <main>
+      <div id="carouselExample" class="carousel slide d-flex w-10" style="height: 500px">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/calesita.jpg" class="d-flex w-100" alt="Cinema">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/dinos.jpg" class="d-flex w-100" alt="Costume Party">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/repu.jpg" class="d-flex w-100" alt="Food Fair">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+      <div class="up" style="background-color: black">
+        <h1>Stats</h1>
+    </div>
+
+    </main>
+
+    <footer>
+        <div class="mediaButtons bg-black">
+          <a href="https://www.instagram.com/" class="fa fa-instagram bg-pink"></a>
+          <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        </div>
+      </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
 </html>

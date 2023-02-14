@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Comic+Neue&family=Overpass:ital@0;1&family=Rajdhani&display=swap');
+
+*{
+  font-family: 'Overpass', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+header{
+  height: 8vh;
+  color: #d63384;
+}
+
+main{
+  min-height: 86vh;
+}
+
+footer{
+  min-height: 6vh;
+}
+
+fieldset{
+  display: flex;
+  flex-direction: column;
+  /* width: 40%; */
+  justify-content: space-between;
+}
+
 /* #logo{
   display: flex;
   margin-left: auto;
@@ -7,6 +36,21 @@
     display: flex;
     flex-direction: column;
 } */
+
+.up{
+  color:#d63384;
+  background-color: black;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.carouselExample{
+  height: 25%;
+}
 
 .fa {
     padding: 20px;
@@ -20,17 +64,18 @@
     opacity: 0.7;
   }
   
-  /* .fa-instagram {
+  .fa-instagram {
     background: transparent;
-    color: black;
-  } */
+    color: #d63384;
+  }
 
   .fa-facebook {
     background: transparent;
-    color: black;
+    color: #d63384;
   }
   
   .fa-twitter {
     background: transparent;
-    color: black;
+    color:#d63384;
+    ;
   }

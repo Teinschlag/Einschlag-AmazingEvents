@@ -1,142 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="./assets/Logo-Amazing-Events.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Home</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="./assets/Logo-Amazing-Events.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Home</title>
 </head>
+
 <body>
-    
-    <header>
-        <nav class="navbar bg-black d-flex">
-            <div class="container w-25" style="margin-left: 0">
-                <img class="logo w-50" src="./assets/Logo Amazing Events.png" alt="">
-            </div>
-            <nav class="navbar bg-black d-flex mr-auto" id="buttons">
-                <form class="d-flex justify-content-around">
-                  <a class="btn btn-outline-success me-1" type="button" href="#">Home</a>
-                  <a class="btn btn-outline-success me-1" type="button" href="./upEvents.html">Upcoming Events</a>
-                  <a class="btn btn-outline-success me-1" type="button" href="./pastEvents.html">Past Events</a>
-                  <a class="btn btn-outline-success me-1" type="button" href="./contact.html">Contact</a>
-                  <a class="btn btn-outline-success me-1" type="button" href="./stats.html">Stats</a>
-                </form>
-              </nav>
-          </nav>
-          
-    </header>
 
-    <main>
-        <div id="carouselExample" class="carousel slide d-flex" style="height: 50">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="./assets/calesita.jpg" class="d-flex w-100" alt="Cinema">
-              </div>
-              <div class="carousel-item">
-                <img src="./assets/dinos.jpg" class="d-flex w-100" alt="Costume Party">
-              </div>
-              <div class="carousel-item">
-                <img src="./assets/repu.jpg" class="d-flex w-100" alt="Food Fair">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-
-          <div class="form-check form-check-inline d-flex d-inline-block" style="margin-left: 5px">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-            <label class="form-check-label" for="inlineCheckbox1">Category</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-            <label class="form-check-label" for="inlineCheckbox2">Category</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
-            <label class="form-check-label" for="inlineCheckbox3">Category</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
-            <label class="form-check-label" for="inlineCheckbox4">Category</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
-            <label class="form-check-label" for="inlineCheckbox5">Category</label>
-          </div>
-        
-
-          <div class="input-group d-flex justify-content-end" style="margin-left: 0;">
-            <div class="form-outline w-25">
-              <input type="search" id="form1" class="form-control" />
-              <label class="form-label" for="form1"></label>
-            </div>
-            <button type="button" class="btn btn-primary w-25" style="width: 50 height: 10px">
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
+  <header class="bg-black">
+    <nav class="navbar bg-black d-flex">
+      <div class="container w-25" style="margin-left: 0">
+        <img class="logo w-50" src="./assets/Logo Amazing Events.png" alt="">
       </div>
+      <nav class="navbar bg-black d-flex mr-auto" style="border-color: #d63384" id="buttons">
+        <form class="d-flex justify-content-around">
+          <a class="btn btn-outline-success me-1" style="color:#d63384; border-color: #d63384;" type="button" href="#">Home</a>
+          <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./upEvents.html">Upcoming
+            Events</a>
+          <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./pastEvents.html">Past
+            Events</a>
+          <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./contact.html">Contact</a>
+          <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./stats.html">Stats</a>
+        </form>
+      </nav>
+    </nav>
 
-      <div class="d-flex gap-5 justify-content-around">
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/Cinema.jpg" class="card-img-top" alt="Cinema">
-        <div class="card-body">
-          <h5 class="card-title">Cinema</h5><h5 class="card-date">Everyday - check the billboards</h5>
-          <p class="card-text">In Amazing Events we count with a wonderful cinema equipated with 3D & Dolby Atmos technology!</p>
-          <h5 class="card-price">$7 for Kids & $14 for adults</h5><a href="#" class="btn btn-primary">Cinema Schedule</a>
+  </header>
+
+  <main>
+    <div id="carouselExample" class="carousel slide d-flex w-10" style="height: 500px">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./assets/calesita.jpg" class="d-flex w-100" alt="Cinema">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/dinos.jpg" class="d-flex w-100" alt="Costume Party">
+        </div>
+        <div class="carousel-item">
+          <img src="./assets/repu.jpg" class="d-flex w-100" alt="Food Fair">
         </div>
       </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/Food_Fair.jpg" class="card-img-top" alt="Fair Food">
-        <div class="card-body">
-          <h5 class="card-title">Food fair</h5><h5 class="card-date">Open everyday - from 8am to 6pm</h5>
-          <p class="card-text">Come to the Fair Food in Amazing events and taste all of our flavors and varities.</p>
-          <h5 class="card-price">Know the prices in each stand</h5><a href="#" class="btn btn-primary">Gastronomic offer</a>
-        </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="up" style="background-color: black">
+      <h1>Home</h1>
+    </div>
+    <div class="form-check form-check-inline d-flex d-inline-block p-5" style="margin-left: 5px">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" style="color: #d63384" for="inlineCheckbox1">Category</label>
       </div>
-      <div class="card" style="width: 18rem;">
-        <img src="./assets/Marathon.jpg" class="card-img-top" alt="Marathon">
-        <div class="card-body">
-          <h5 class="card-title">Marathon</h5><h5 class="card-date">Wednesday, saturday & sunday - 10am</h5>
-          <p class="card-text">In Amazing Events we count with challenges for everyone. You can run 5, 10, 21 or 42 km in the Marathon!</p>
-          <h5 class="card-price">Free for all!</h5><a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" style="color: #d63384" for="inlineCheckbox2">Category</label>
       </div>
-      <div class="card" style="width: 18rem;">
-        <img src="/assets/Museum_Tour.jpg" class="card-img-top" alt="Museum">
-        <div class="card-body">
-          <h5 class="card-title">Museum</h5><h5 class="card-date">Everyday - 3pm</h5>
-          <p class="card-text">Whant to take a ride for the old Jurassic? Come to the Museum and take the Tour for see all the skeletons without missing anything.</p>
-          <h5 class="card-price">$5 for Kids & $10 for adults</h5><a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+        <label class="form-check-label" style="color: #d63384" for="inlineCheckbox3">Category</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+        <label class="form-check-label" style="color: #d63384" for="inlineCheckbox4">Category</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="option5">
+        <label class="form-check-label" style="color: #d63384" for="inlineCheckbox5">Category</label>
+      </div>
+
+
+      <div class="input-group d-flex justify-content-end" style="margin-left: 0;">
+        <div class="form-outline w-25">
+          <input type="search" id="form1" class="form-control" />
+          <label class="form-label" for="form1"></label>
         </div>
+        <button type="button" class="btn btn-primary d-flex flex-inline-block w-25" style="color: #d63384; background-color: black; height: 2.3em">Search</button>
       </div>
     </div>
-    </main>
 
-    <footer>
-      <!-- <a
-        class="btn btn-primary btn-lg btn-floating"
-        style="background-color: transparent;
-        role="button">
-        <img src="./assets/ig.png">
-        <i class="fab fa-instagram"></i>
-      </a> -->
-      <div class="mediaButtons rounded-circle bg-b">
-        <a href="#" class="fa fa-instagram bg-red"></a>
-        <a href="#" class="fa fa-facebook"></a>
-        <a href="#" class="fa fa-twitter"></a>
+    <div class="d-flex gap-5 p-5 justify-content-around">
+      <div class="card" style="width: 18rem;">
+        <img src="./assets/Cinema.jpg" class="card-img-top" style="height: 150px" alt="Cinema">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Cinema</h5>
+          <p class="card-text">In Amazing Events we count with a wonderful cinema equipated with 3D & Dolby Atmos
+            technology!</p>
+          <a href="./details.html" class="btn btn-primary d-flex flex-center" style="color: #d63384; background-color: black">Cinema Schedule</a>
+        </div>
       </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <div class="card" style="width: 18rem;">
+        <img src="./assets/Food_Fair.jpg" class="card-img-top" style="height: 150px" alt="Fair Food">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Food fair</h5>
+          <p class="card-text">Come to the Fair Food in Amazing events and taste all of our flavors and varities.</p>
+          <a href="./details.html" class="btn btn-primary d-flex flex-center" style="color: #d63384; background-color: black">Gastronomic offer</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="./assets/Marathon.jpg" class="card-img-top" style="height: 150px" alt="Marathon">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Marathon</h5>
+          <p class="card-text">In Amazing Events we count with challenges for everyone. You can run 5, 10, 21 or 42 km
+            in the Marathon!</p>
+          <a href="./details.html" class="btn btn-primary d-flex flex-center" style="color: #d63384; background-color: black">Search start point</a>
+        </div>
+      </div>
+      </div>
+      <div class="d-flex gap-5 p-5 justify-content-around">
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/Museum_Tour.jpg" class="card-img-top" style="height: 150px" alt="Museum">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Museum</h5>
+          <p class="card-text">Whant to take a ride for the old Jurassic? Come to the Museum and take the Tour for see
+            all the skeletons without missing anything.</p>
+          <a href="./details.html" class="btn btn-primary d-flex flex-center" style="color: #d63384; background-color: black">Get tickets</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/Music_Concert.jpg" class="card-img-top" style="height: 150px" alt="Music_Concert">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Music Concert</h5>
+          <p class="card-text">Enjoy the best bands in one place. We have three shows for day in three different escenarios!</p>
+          <a href="./details.html" class="btn btn-primary d-flex flex-center" style="color: #d63384; background-color: black">Get tickets</a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="/assets/Costume_Party.jpg" class="card-img-top" style="height: 150px" alt="Costume_Party">
+        <div class="card-body d-flex flex-column justify-content-between">
+          <h5 class="card-title">Costume Party</h5>
+          <p class="card-text">Anyone who loves costumes in the room? You're welcome to join to the costume party every friday & saturdays at night!</p>
+          <a href="./details.html" class="btn btn-primary d-flex flex-center" style="color: #d63384; background-color: black">Get costumes</a>
+        </div>
+      </div>
+  </main>
+
+  <footer>
+    <div class="mediaButtons bg-black">
+      <a href="https://www.instagram.com/" class="fa fa-instagram bg-pink"></a>
+      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter"></a>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
