@@ -79,3 +79,9 @@ fieldset{
     color:#d63384;
     ;
   }
+
+  .disabled {
+    pointer-events: none;
+  }
+
+

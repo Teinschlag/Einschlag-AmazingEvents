@@ -12,27 +12,62 @@
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <title>Home</title>
 </head>
+
 <body>
 
-    <header class="bg-black">
-        <nav class="navbar bg-black d-flex">
-          <div class="container w-25" style="margin-left: 0">
-            <img class="logo w-50" src="./assets/Logo Amazing Events.png" alt="">
+  <header class="bg-black">
+    <nav class="navbar bg-black d-flex">
+      <div class="container w-25" style="margin-left: 0">
+        <img class="logo w-50" src="./assets/Logo_Amazing_Events.png" alt="">
+      </div>
+      <nav class="navbar bg-black d-flex mr-auto" style="border-color: #d63384" id="buttons">
+        <form class="d-flex justify-content-around">
+          <a class="btn btn-outline-success me-1" style="color:#d63384; border-color: #d63384;"
+            href="./index.html">Home</a>
+          <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384"
+            href="./upEvents.html">Upcoming
+            Events</a>
+          <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384"
+            href="./pastEvents.html">Past
+            Events</a>
+          <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384"
+            href="./contact.html">Contact</a>
+          <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384"
+            href="./stats.html">Stats</a>
+        </form>
+      </nav>
+    </nav>
+
+  </header>
+
+  <main>
+    <div class="card mb-3 mt-5 d-flex flex-column align-items-center justify-content-center" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="./assets/Food_Fair.jpg" class="img-fluid rounded-start" alt="...">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Fair Food</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
           </div>
-          <nav class="navbar bg-black d-flex mr-auto" style="border-color: #d63384" id="buttons">
-            <form class="d-flex justify-content-around">
-              <a class="btn btn-outline-success me-1" style="color:#d63384; border-color: #d63384;" type="button" href="#">Home</a>
-              <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./upEvents.html">Upcoming
-                Events</a>
-              <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./pastEvents.html">Past
-                Events</a>
-              <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./contact.html">Contact</a>
-              <a class="btn btn-outline-success me-1" style="color: #d63384; border-color: #d63384" type="button" href="./stats.html">Stats</a>
-            </form>
-          </nav>
-        </nav>
-    
-      </header>
-    
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="mediaButtons bg-black">
+      <a href="https://www.instagram.com/" class="fa fa-instagram bg-pink"></a>
+      <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+      <a href="https://twitter.com/" class="fa fa-twitter"></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
