@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat&family=Comic+Neue&family=Overpass:ital@0;1&family=Rajdhani&display=swap');
 
-*{
+* {
   font-family: 'Overpass', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 
-header{
+header {
   height: 8vh;
   color: #d63384;
 }
 
-main{
+main {
   min-height: 86vh;
 }
 
-footer{
+footer {
   min-height: 6vh;
 }
 
-fieldset{
+fieldset {
   display: flex;
   flex-direction: column;
   /* width: 40%; */
@@ -37,8 +37,8 @@ fieldset{
     flex-direction: column;
 } */
 
-.up{
-  color:#d63384;
+.up {
+  color: #d63384;
   background-color: black;
   margin-top: 50px;
   text-align: center;
@@ -48,40 +48,233 @@ fieldset{
   margin-top: 0;
 }
 
-.carouselExample{
+.carouselExample {
   height: 25%;
 }
 
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .fa:hover {
-    opacity: 0.7;
-  }
-  
-  .fa-instagram {
-    background: transparent;
-    color: #d63384;
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-instagram {
+  background: transparent;
+  color: #d63384;
+}
+
+.fa-facebook {
+  background: transparent;
+  color: #d63384;
+}
+
+.fa-twitter {
+  background: transparent;
+  color: #d63384;
+  ;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.carousel img {
+  height: 500px;
+  object-fit: cover;
+}
+
+th {
+  width: 1200px;
+}
+
+td {
+  width: 400px;
+}
+
+tr {
+  width: 200px;
+}
+
+
+@media only screen and (max-width: 1120px) {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .fa-facebook {
-    background: transparent;
-    color: #d63384;
-  }
-  
-  .fa-twitter {
-    background: transparent;
-    color:#d63384;
-    ;
+  .form-check {
+    width: 50%;
   }
 
-  .disabled {
-    pointer-events: none;
+  .form-outline {
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .input-group {
+    display: flex;
+    width: 50%;
+    margin-top: 0px;
+    justify-content: center;
+  }
+
+  .detailsCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 1026px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #carouselExample {
+    margin-top: 10px;
+  }
+
+  .form-container {
+    flex-direction: column;
+  }
+
+  .up {
+    display: flex;
+    height: 100%;
+  }
+}
+
+
+@media only screen and (max-width: 745px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .form-check {
+    width: 50%;
+    align-self: flex-start;
+  }
+}
+
+
+@media only screen and (max-width: 656px) {
+  .navbar-btn {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    flex-wrap: wrap;
+  }
+
+  #carouselExample {
+    margin-top: 15px;
   }
 
 
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .form-check {
+    width: 50%;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  header {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media only screen and (max-width: 590px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .form-check {
+    width: 50%;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .finalButtons {
+    width: 200px;
+    display: flex;
+    align-items: start;
+  }
+}
+
+@media only screen and (max-width: 492px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .form-check {
+    width: 50%;
+    flex-direction: column;
+    align-self: center;
+  }
+
+  .navbar-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  header {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
