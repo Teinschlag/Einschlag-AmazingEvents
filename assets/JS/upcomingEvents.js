@@ -13,7 +13,7 @@ for(let element of data.events){
         div.classList.add("card")
         div.style.width = "18rem"
         div.innerHTML = `<img src=${element.image} class="card-img-top" alt="...">
-            <div class="card" style="color: #d63384; background-color: black">
+            <div class="card p-2 border-none" style="color: #d63384; background-color: black">
             <h5 class="card-title">${element.name}</h5>
             <p class="card-text">${element.description}</p>
             <p>Price: ${element.price} U$D</p>
