@@ -17,7 +17,7 @@ for(let element of data.events){
             <h5 class="card-title">${element.name}</h5>
             <p class="card-text">${element.description}</p>
             <p>Price: ${element.price} U$D</p>
-            <a class="btn btn-outline-success me-1 style="color: #d63384; background-color: black"" href="./details.html">More</a>
+            <a class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1" style="color: #d63384" aria-current="page" href="/details.html">More</a>
             </div>`
     fragment.appendChild(div)
     }
