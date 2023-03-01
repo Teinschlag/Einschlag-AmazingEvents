@@ -8,7 +8,7 @@
 }
 
 header {
-  height: 8vh;
+  min-height: 8vh;
   color: #d63384;
 }
 
@@ -37,10 +37,7 @@ fieldset {
     flex-direction: column;
 } */
 
-#navbar-btn{
-  font-style: normal;
-  color: #d63384;
-}
+
 
 .up {
   color: #d63384;
@@ -119,7 +116,7 @@ tr {
 }
 
   .form-check {
-    width: 50%;
+    width: 75%;
   }
 
   .form-outline {
@@ -129,8 +126,6 @@ tr {
 
   .input-group {
     display: flex;
-    width: 50%;
-    margin-top: 0px;
     justify-content: center;
   }
 
@@ -153,6 +148,12 @@ tr {
 
   #carouselExample {
     margin-top: 10px;
+  }
+  
+  .form-check {
+    width: 50%;
+    flex-direction: column;
+    align-self: center;
   }
 
   .form-container {
@@ -177,7 +178,8 @@ tr {
 
   .form-check {
     width: 50%;
-    align-self: flex-start;
+    flex-direction: column;
+    align-self: center;
   }
 }
 
