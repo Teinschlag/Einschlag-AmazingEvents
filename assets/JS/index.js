@@ -1,4 +1,4 @@
-const card_index = document.getElementById('card_index')
+const detailsCard = document.getElementById('detailsCard')
 
 let fragment = document.createDocumentFragment()
 
@@ -11,7 +11,7 @@ for(let element of data.events){
       <h3 class="card-title">${element.name}</h3>
       <p class="card-text">${element.description}</p>
       <p>Price: ${element.price} u$d</p>
-      <a href="./details.html" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
+      <a href="./details.html?id=${element.id}" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
         style="color: #d63384; background-color: black">More</a>
     </div>`
     fragment.appendChild(div)
@@ -109,10 +109,18 @@ function imprimirPorConsola(e){
     const texto = form1.value.toLowerCase();
     for(let name of data.events){
         let name = data.events.name.toLowerCase();
+        if(name.indexOf(texto) !== -1){
+
+        }
     }
-    console.log("Se ve el filtrado")
+    
  }
 
+
+
+
+
+////////////////TARJETA DETAILS
 
 
  
