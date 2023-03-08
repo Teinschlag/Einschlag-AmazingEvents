@@ -22,8 +22,6 @@ for(let element of eventos){
     container.appendChild(fragment)
 }
 
-
-
 renderCards(data.events)
 
 ////// checkboxes
@@ -61,16 +59,16 @@ check_category.appendChild(checkbox(data.events))
  function verSeleccion(eventos){
     const checked = document.querySelectorAll('input[type=checkbox]:checked')
     const inputValues = Array.from(checked).map(input => input.value)
+    
 
     const eventosFiltrados = eventos.filter(objeto => inputValues.includes(objeto.category.split(' ').join('_')))
-
+    console.log(eventosFiltrados);
      if(eventosFiltrados.length > 0){
-        return eventosFiltrados
+        renderCards(eventosFiltrados)
      }else{
-         return eventos
+        renderCards(eventos)
      }
  }
-
 
 /////// input de formulario
 function busquedaPorTexto(eventos){
@@ -78,25 +76,27 @@ function busquedaPorTexto(eventos){
         if(textoDeBusqueda == "")
         return eventos
         let nuevoArray = eventos.filter(element => element.name.toLocaleLowerCase().includes(textoDeBusqueda.toLowerCase().trim()))
-        return nuevoArray
-    
+        console.log(nuevoArray)
+        return nuevoArray  
 }
 
 const inputForm = document.getElementById('inputForm');
-inputForm.addEventListener('keyup', crossFilters)
+inputForm.addEventListener('keyup', (e) => {
+    let textoDeBusqueda = inputForm.value
+    console.log(texto(textoDeBusqueda))
+})
 
-
-
-function texto(textoDeBusqueda){
-    
+ function texto(textoDeBusqueda){
+     if(textoDeBusqueda == "")
+     return data.events
+     let nuevoArray = data.events.filter(element => element.name.toLocaleLowerCase().includes(textoDeBusqueda.toLowerCase().trim()))
+     renderCards(nuevoArray)
 }
 
-function crossFilters(){
-    const eventosChequeados = verSeleccion(data.events)
-    const eventosFiltrados = busquedaPorTexto(eventosChequeados)
-    if(eventosFiltrados > 0){
-    renderCards(eventosFiltrados)
-    }else{
-        console.warn("hacer una nueva card para este caso")
-    }
-}
+  function crossFilters(){
+      const eventosChequeados = verSeleccion(data.events)
+      const eventosBuscados = busquedaPorTexto(eventosChequeados)
+      if(eventosBuscados > 0){
+      renderCards(eventosBuscados)
+      }
+ }
