@@ -13,6 +13,7 @@ function showCard(){
     const div = document.getElementById('detailsCard')
     let detailsCard = document.createElement('div')
     detailsCard.classList.add("card")
+    detailsCard.classList.add("mt-3", "mb-3")
     detailsCard.style.width = "18rem"
     detailsCard.innerHTML = `<img src="${evento.image}" class="card-img-top" style="height: 150px" alt="Cinema">
     <div class="card-body d-flex flex-column justify-content-between">
