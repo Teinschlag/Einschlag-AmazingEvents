@@ -2,26 +2,26 @@
 
 function renderCards(eventos){
     
-    const container = document.getElementById('card_upEvents')
+    const container = document.getElementById('card_pastEvents')
     container.innerHTML=''
     if(eventos.length > 0){
     let fragment = document.createDocumentFragment()
 
-for(let element of eventos){
-    let div = document.createElement('div')
-    div.classList.add("card")
-    div.style.width = "18rem"
-    div.innerHTML = `<img src="${element.image}" class="card-img-top" style="height: 150px" alt="Cinema">
-    <div class="card-body d-flex flex-column justify-content-between">
-      <h3 class="card-title">${element.name}</h3>
-      <p class="card-text">${element.description}</p>
-      <p>Price: ${element.price} u$d</p>
-      <a href="./details.html?id=${element.id}" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
-        style="color: #d63384; background-color: black">More</a>
-    </div>`
-    fragment.appendChild(div)
-    }
-    container.appendChild(fragment)
+    for(let element of eventos){
+        let div = document.createElement('div')
+        div.classList.add("card")
+        div.style.width = "18rem"
+        div.innerHTML = `<img src="${element.image}" class="card-img-top" style="height: 150px" alt="Cinema">
+        <div class="card-body d-flex flex-column justify-content-between">
+        <h3 class="card-title">${element.name}</h3>
+        <p class="card-text">${element.description}</p>
+        <p>Price: ${element.price} u$d</p>
+        <a href="./details.html?id=${element.id}" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
+            style="color: #d63384; background-color: black">More</a>
+        </div>`
+        fragment.appendChild(div)
+        }
+        container.appendChild(fragment)
     }else{
         let div = document.createElement('div')
         div.innerHTML = `<p class="card-text">Nothing to show. Please, enter another keyword to find your event.</p>`
@@ -43,13 +43,13 @@ for(let element of data.events){
         div.classList.add("card")
         div.style.width = "18rem"
         div.innerHTML = `<img src="${element.image}" class="card-img-top" style="height: 150px" alt="Cinema">
-    <div class="card-body d-flex flex-column justify-content-between">
-      <h3 class="card-title">${element.name}</h3>
-      <p class="card-text">${element.description}</p>
-      <p>Price: ${element.price} u$d</p>
-      <a href="./details.html" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
+        <div class="card-body d-flex flex-column justify-content-between">
+        <h3 class="card-title">${element.name}</h3>
+        <p class="card-text">${element.description}</p>
+        <p>Price: ${element.price} u$d</p>
+        <a href="./details.html" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
         style="color: #d63384; background-color: black">More</a>
-    </div>`
+        </div>`
     fragment.appendChild(div)
     }
 }
@@ -79,6 +79,7 @@ let fragmentCheck = document.createDocumentFragment()
  }
 
 check_category.appendChild(checkbox(data.events))
+
 
 ////clicks en checkboxes
 let inputValues = []
