@@ -3,23 +3,28 @@
 function renderCards(eventos){
     const container = document.getElementById('card_index')
     container.innerHTML=''
+
+    ////meter notificacion si no se encuentra
+
     let fragment = document.createDocumentFragment()
 
-for(let element of eventos){
-    let div = document.createElement('div')
-    div.classList.add("card")
-    div.style.width = "18rem"
-    div.innerHTML = `<img src="${element.image}" class="card-img-top" style="height: 150px" alt="Cinema">
-    <div class="card-body d-flex flex-column justify-content-between">
-      <h3 class="card-title">${element.name}</h3>
-      <p class="card-text">${element.description}</p>
-      <p>Price: ${element.price} u$d</p>
-      <a href="./details.html?id=${element.id}" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
-        style="color: #d63384; background-color: black">More</a>
-    </div>`
-    fragment.appendChild(div)
-    }
-    container.appendChild(fragment)
+    for(let element of eventos){
+        let div = document.createElement('div')
+        div.classList.add("card")
+        div.style.width = "18rem"
+        div.innerHTML = `<img src="${element.image}" class="card-img-top" style="height: 150px" alt="Cinema">
+        <div class="card-body d-flex flex-column justify-content-between">
+        <h3 class="card-title">${element.name}</h3>
+        <p class="card-text">${element.description}</p>
+        <p>Price: ${element.price} u$d</p>
+        <a href="./details.html?id=${element.id}" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
+            style="color: #d63384; background-color: black">More</a>
+        </div>`
+        fragment.appendChild(div)
+        }
+        container.appendChild(fragment)
+
+        
 }
 
 renderCards(data.events)
@@ -50,53 +55,51 @@ let fragmentCheck = document.createDocumentFragment()
 check_category.appendChild(checkbox(data.events))
 
 ////clicks en checkboxes
- const checkboxes = document.querySelectorAll('input[type=checkbox]')
+let inputValues = []
+let textoDeBusqueda = ""
+
+const checkboxes = document.querySelectorAll('input[type=checkbox]')
 
  checkboxes.forEach(checkbox => {
-     checkbox.addEventListener('change', crossFilters)
+     checkbox.addEventListener('change', verSeleccion)
  })
 
  function verSeleccion(eventos){
-    const checked = document.querySelectorAll('input[type=checkbox]:checked')
-    const inputValues = Array.from(checked).map(input => input.value)
-    
+    inputValues = Array.from(checkboxes).filter(check => check.checked).map(input => input.value)
+    crossFilters(data.events)
 
-    const eventosFiltrados = eventos.filter(objeto => inputValues.includes(objeto.category.split(' ').join('_')))
-    console.log(eventosFiltrados);
-     if(eventosFiltrados.length > 0){
-        renderCards(eventosFiltrados)
-     }else{
-        renderCards(eventos)
-     }
  }
+ 
+ function filterArray(checkArray, events){
+    if(checkArray == 0){
+        return events
+    }else{
+    const eventosFiltrados = events.filter(objeto => checkArray.includes(objeto.category.split(' ').join('_')))
+    console.log(eventosFiltrados);
+        return eventosFiltrados
+    }
+ }
+
 
 /////// input de formulario
-function busquedaPorTexto(eventos){
-        let textoDeBusqueda = inputForm.value
-        if(textoDeBusqueda == "")
-        return eventos
-        let nuevoArray = eventos.filter(element => element.name.toLocaleLowerCase().includes(textoDeBusqueda.toLowerCase().trim()))
-        console.log(nuevoArray)
-        return nuevoArray  
-}
+ function busquedaPorTexto(string, events){
+         if(string == ""){
+            return events
+         }else{         
+         let nuevoArray = events.filter(element => element.name.toLowerCase().includes(textoDeBusqueda.toLowerCase().trim()))
+         console.log(nuevoArray)
+         return nuevoArray
+        }
+ }
 
-const inputForm = document.getElementById('inputForm');
-inputForm.addEventListener('keyup', (e) => {
-    let textoDeBusqueda = inputForm.value
-    console.log(texto(textoDeBusqueda))
-})
-
- function texto(textoDeBusqueda){
-     if(textoDeBusqueda == "")
-     return data.events
-     let nuevoArray = data.events.filter(element => element.name.toLocaleLowerCase().includes(textoDeBusqueda.toLowerCase().trim()))
-     renderCards(nuevoArray)
-}
+ const inputForm = document.getElementById('inputForm');
+ inputForm.addEventListener('keyup', (e) => {
+     textoDeBusqueda = inputForm.value
+     crossFilters(data.events)
+ })
 
   function crossFilters(){
-      const eventosChequeados = verSeleccion(data.events)
-      const eventosBuscados = busquedaPorTexto(eventosChequeados)
-      if(eventosBuscados > 0){
+      const eventosChequeados = filterArray(inputValues, data.events)
+      const eventosBuscados = busquedaPorTexto(textoDeBusqueda, eventosChequeados)
       renderCards(eventosBuscados)
-      }
- }
+  }
