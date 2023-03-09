@@ -1,11 +1,10 @@
 /////// cards
 
 function renderCards(eventos){
+    
     const container = document.getElementById('card_index')
     container.innerHTML=''
-
-    ////meter notificacion si no se encuentra
-
+    if(eventos.length > 0){
     let fragment = document.createDocumentFragment()
 
     for(let element of eventos){
@@ -23,8 +22,11 @@ function renderCards(eventos){
         fragment.appendChild(div)
         }
         container.appendChild(fragment)
-
-        
+    }else{
+        let div = document.createElement('div')
+        div.innerHTML = `<p class="card-text">Nothing to show. Please, enter another keyword to find your event.</p>`
+        container.appendChild(div)
+    }
 }
 
 renderCards(data.events)
@@ -75,7 +77,6 @@ const checkboxes = document.querySelectorAll('input[type=checkbox]')
         return events
     }else{
     const eventosFiltrados = events.filter(objeto => checkArray.includes(objeto.category.split(' ').join('_')))
-    console.log(eventosFiltrados);
         return eventosFiltrados
     }
  }
@@ -87,7 +88,6 @@ const checkboxes = document.querySelectorAll('input[type=checkbox]')
             return events
          }else{         
          let nuevoArray = events.filter(element => element.name.toLowerCase().includes(textoDeBusqueda.toLowerCase().trim()))
-         console.log(nuevoArray)
          return nuevoArray
         }
  }
