@@ -20,7 +20,10 @@ function showCard(){
     <h3 class="card-title">${evento.name}</h3>
     <p>Date: ${evento.date}</p>
     <p class="card-text">${evento.description}</p>
+    <p>Category: ${evento.category}</p>
     <p>Place: ${evento.place}</p>
+    <p>Capacity: ${evento.capacity}</p>
+    <p>Assistance: ${evento.assistance}</p>
     <p>Price: ${evento.price} u$d</p>
     <a href="./index.html" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
         style="color: #d63384; background-color: black">Back</a>
@@ -29,3 +32,15 @@ function showCard(){
 }
 
 showCard()
+
+
+// id: 1,
+//     "image":"https://i.postimg.cc/Fs03hQDt/Collectivities-Party.jpg",
+//     "name":"Collectivities Party",
+//     "date":"2021-12-12",
+//     "description":"Enjoy your favourite dishes, from different countries, in a unique event for the whole family.",
+//     "category":"Food Fair",
+//     "place":"Room A",
+//     "capacity":45000,
+//     "assistance":42756,
+//     "price":5
