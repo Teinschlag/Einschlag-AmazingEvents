@@ -57,8 +57,6 @@
 
  ////// checkboxes
 
- 
-
  function checkbox(eventos) {
 
     const check_category = document.getElementById('check_category')
@@ -82,7 +80,7 @@
 
 //  check_category.appendChild(checkbox(data.events))
 
-// ////clicks en checkboxes
+ ////clicks en checkboxes
 // let inputValues = []
 // let textoDeBusqueda = ""
 

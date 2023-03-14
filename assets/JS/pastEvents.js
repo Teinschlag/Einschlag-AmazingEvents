@@ -1,3 +1,29 @@
+const urlAPI =  "https://mindhub-xj03.onrender.com/api/amazing"
+    
+    async function traerPastEvents(){
+        // fetch('https://mindhub-xj03.onrender.com/api/amazing')
+        //     .then(response => response.json())
+        //     .then(data => console.log(data.events))
+        //     .catch(error => console.error(error + " No se han logrado traer los eventos con exito"))
+
+        try{
+            const response = await fetch(urlAPI)
+            const data = await response.json()
+            const events = data.events
+            const newDate = new Date(data.currentDate)
+            const pastDate = Date.parse(events[0].date)
+            let pastCards = events.filter(evento=>Date.parse(evento.date)<newDate);
+            console.log(pastCards)
+            renderCards(pastCards, 'card_pastEvents')
+            checkbox(events, 'check_category')
+
+        }
+        catch(error){
+            console.log(error = "No se ha logrado traer la informacion de la API")
+        }
+    }
+    traerPastEvents()
+
 /////// cards
 
 function renderCards(eventos){
@@ -28,7 +54,7 @@ function renderCards(eventos){
         container.appendChild(div)
     }
 }
-const card_pastEvents = document.getElementById('card_pastEvents')
+// const card_pastEvents = document.getElementById('card_pastEvents')
 
 let fragment = document.createDocumentFragment()
 
@@ -53,7 +79,7 @@ for(let element of data.events){
     fragment.appendChild(div)
     }
 }
-card_pastEvents.appendChild(fragment)
+//card_pastEvents.appendChild(fragment)
 
 ////// checkboxes
 
