@@ -15,7 +15,36 @@
             console.log(events)
             renderCards(events, 'card_index')
             checkbox(events, 'check_category')
+
+            const checkboxes = document.querySelectorAll('input[type=checkbox]')
+            console.log(checkboxes)
+            let inputValues = []
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', ()=>{
+                    inputValues = Array.from(checkboxes).filter(check => check.checked).map(input => input.value)
+                    console.log(inputValues)
+                    crossFilters()
+                })
+
+        })
+
+            const inputForm = document.getElementById('inputForm');
+            console.log(inputForm)
+            let textoDeBusqueda = ""
+            inputForm.addEventListener('keyup', (e) => {
+            textoDeBusqueda = e.target.value
+            console.log(textoDeBusqueda)
+            crossFilters()
+        })
+
+        function crossFilters(){
+            const eventosChequeados = filterArray(inputValues, events)
+            const eventosBuscados = busquedaPorTexto(textoDeBusqueda, eventosChequeados)
+            renderCards(eventosBuscados, 'card_index')
         }
+
+
+    }
         catch(error){
             console.log(error = "No se ha logrado traer la informacion de la API")
         }
@@ -24,9 +53,10 @@
     traerEvents()
 // /////// cards
 
- function renderCards(eventos){
+ function renderCards(eventos, idContenedor){
     
-     const container = document.getElementById('card_index')
+     const container = document.getElementById(idContenedor)
+     console.log(container);
      container.innerHTML=''
      if(eventos.length > 0){
      let fragment = document.createDocumentFragment()
@@ -57,9 +87,9 @@
 
  ////// checkboxes
 
- function checkbox(eventos) {
+ function checkbox(eventos, container) {
 
-    const check_category = document.getElementById('check_category')
+    const check_category = document.getElementById(container)
 
      const arrayCat = eventos.map(event => event.category)
      const uniqueCategories = [...new Set(arrayCat)]
@@ -81,49 +111,49 @@
 //  check_category.appendChild(checkbox(data.events))
 
  ////clicks en checkboxes
-// let inputValues = []
-// let textoDeBusqueda = ""
+//  let inputValues = []
+//  let textoDeBusqueda = ""
 
-// const checkboxes = document.querySelectorAll('input[type=checkbox]')
+//  const checkboxes = document.querySelectorAll('input[type=checkbox]')
 
-//  checkboxes.forEach(checkbox => {
-//      checkbox.addEventListener('change', verSeleccion)
-//  })
+//   checkboxes.forEach(checkbox => {
+//       checkbox.addEventListener('change', verSeleccion)
+//   })
 
-//  function verSeleccion(eventos){
-//     inputValues = Array.from(checkboxes).filter(check => check.checked).map(input => input.value)
-//     crossFilters(data.events)
+//   function verSeleccion(){
+//      inputValues = Array.from(checkboxes).filter(check => check.checked).map(input => input.value)
+//      crossFilters(data.events)
 
-//  }
+//   }
  
-//  function filterArray(checkArray, events){
-//     if(checkArray == 0){
-//         return events
-//     }else{
-//     const eventosFiltrados = events.filter(objeto => checkArray.includes(objeto.category.split(' ').join('_')))
-//         return eventosFiltrados
-//     }
-//  }
+  function filterArray(checkArray, events){
+     if(checkArray == 0){
+         return events
+     }else{
+     const eventosFiltrados = events.filter(objeto => checkArray.includes(objeto.category.split(' ').join('_')))
+         return eventosFiltrados
+     }
+  }
 
 
 // /////// input de formulario
-//  function busquedaPorTexto(string, events){
-//          if(string == ""){
-//             return events
-//          }else{         
-//          let nuevoArray = events.filter(element => element.name.toLowerCase().includes(textoDeBusqueda.toLowerCase().trim()))
-//          return nuevoArray
-//         }
-//  }
+  function busquedaPorTexto(string, events){
+          if(string == ""){
+             return events
+          }else{         
+          let nuevoArray = events.filter(element => element.name.toLowerCase().includes(string.toLowerCase().trim()))
+          return nuevoArray
+         }
+  }
 
-//  const inputForm = document.getElementById('inputForm');
-//  inputForm.addEventListener('keyup', (e) => {
-//      textoDeBusqueda = inputForm.value
-//      crossFilters(data.events)
-//  })
+//   const inputForm = document.getElementById('inputForm');
+//   inputForm.addEventListener('keyup', (e) => {
+//       textoDeBusqueda = inputForm.value
+//       crossFilters(data.events)
+//   })
 
-//   function crossFilters(){
-//       const eventosChequeados = filterArray(inputValues, data.events)
-//       const eventosBuscados = busquedaPorTexto(textoDeBusqueda, eventosChequeados)
-//       renderCards(eventosBuscados)
-//   }
+    // function crossFilters(){
+    //     const eventosChequeados = filterArray(inputValues, data.events)
+    //     const eventosBuscados = busquedaPorTexto(textoDeBusqueda, eventosChequeados)
+    //     renderCards(eventosBuscados)
+    // }
