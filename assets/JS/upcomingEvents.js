@@ -73,7 +73,7 @@ const urlAPI =  "https://mindhub-xj03.onrender.com/api/amazing"
          <h3 class="card-title">${element.name}</h3>
          <p class="card-text">${element.description}</p>
          <p>Price: ${element.price} u$d</p>
-         <a href="./details.html?_id=${element.id}" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
+         <a href="./details.html?id=${element._id}" class="btn btn-dark nav-item p-2 me-1 ms-1 mb-1"
              style="color: #d63384; background-color: black">More</a>
          </div>`
          fragment.appendChild(div)
