@@ -1,15 +1,51 @@
- const queryString = location.search
- console.log(queryString)
- const params = new URLSearchParams(queryString)
- console.log(params)
- const id = params.get("id")
- console.log(id)
+const urlAPI =  "https://mindhub-xj03.onrender.com/api/amazing"
+    
+async function traerEvents(){
+    // fetch('https://mindhub-xj03.onrender.com/api/amazing')
+    //     .then(response => response.json())
+    //     .then(data => console.log(data.events))
+    //     .catch(error => console.error(error + " No se han logrado traer los eventos con exito"))
 
- const evento = events.find(element => element.id == id)
- console.log(evento)
+    try{
+        const response = await fetch(urlAPI)
+        console.log(response)
+        const data = await response.json()
+        console.log(data)
+        const events = data.events
+        console.log(events)
+
+        const queryString = location.search
+        console.log(queryString)
+        const params = new URLSearchParams(queryString)
+        console.log(params)
+        const id = params.get("id")
+        console.log(id)
+       
+        const evento = events.find(element => element._id == id)
+        console.log(evento)
+
+        showCard(evento)
+
+}
+    catch(error){
+        console.log(error = "No se ha logrado traer la informacion de la API")
+    }
+}
+
+traerEvents()
+ 
+//  const queryString = location.search
+//  console.log(queryString)
+//  const params = new URLSearchParams(queryString)
+//  console.log(params)
+//  const id = params.get("id")
+//  console.log(id)
+
+//  const evento = events.find(element => element.id == _id)
+//  console.log(evento)
 
 
- function showCard(){
+ function showCard(evento){
      const div = document.getElementById('detailsCard')
      let detailsCard = document.createElement('div')
      detailsCard.classList.add("card")
@@ -31,4 +67,4 @@
      div.appendChild(detailsCard)
 }
 
- showCard()
+//  showCard()
