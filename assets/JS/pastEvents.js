@@ -17,7 +17,7 @@ async function traerPastEvents() {
         let pastCards = events.filter(evento => Date.parse(evento.date) < newDate);
         console.log(pastCards)
         renderCards(pastCards, 'card_pastEvents')
-        checkbox(events, 'check_category')
+        checkbox(pastCards, 'check_category')
 
         const checkboxes = document.querySelectorAll('input[type=checkbox]')
         console.log(checkboxes)
@@ -41,7 +41,7 @@ async function traerPastEvents() {
         })
 
         function crossFilters() {
-            const eventosChequeados = filterArray(inputValues, events)
+            const eventosChequeados = filterArray(inputValues, pastCards)
             const eventosBuscados = busquedaPorTexto(textoDeBusqueda, eventosChequeados)
             renderCards(eventosBuscados, 'card_pastEvents')
         }

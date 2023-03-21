@@ -17,7 +17,7 @@ async function traerUpcomingEvents() {
         let upcomingCards = events.filter(evento => Date.parse(evento.date) > newDate);
         console.log(upcomingCards)
         renderCards(upcomingCards, 'card_upEvents')
-        checkbox(events, 'check_category')
+        checkbox(upcomingCards, 'check_category')
 
         const checkboxes = document.querySelectorAll('input[type=checkbox]')
         console.log(checkboxes)
@@ -41,7 +41,7 @@ async function traerUpcomingEvents() {
         })
 
         function crossFilters() {
-            const eventosChequeados = filterArray(inputValues, events)
+            const eventosChequeados = filterArray(inputValues, upcomingCards)
             const eventosBuscados = busquedaPorTexto(textoDeBusqueda, eventosChequeados)
             renderCards(eventosBuscados, 'card_upEvents')
         }

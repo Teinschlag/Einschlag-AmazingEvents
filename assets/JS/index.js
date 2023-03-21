@@ -56,7 +56,6 @@ traerEvents()
 function renderCards(eventos, idContenedor) {
 
     const container = document.getElementById(idContenedor)
-    console.log(container);
     container.innerHTML = ''
     if (eventos.length > 0) {
         let fragment = document.createDocumentFragment()
